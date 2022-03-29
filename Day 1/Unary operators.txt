@@ -1,0 +1,31 @@
+#include <iostream>
+  int postDec(int a){
+    a= --a;
+    return a;
+  }
+  int preDec(int a){
+    return --a;
+  }
+  int incDec(int a,int b){
+    if(b<a){
+      a=++b;
+      return a;
+    }
+    else{
+      a=--b;
+      return a;
+    }
+  }
+  int remainTwo(int a,int b){
+    int r;
+    r=a%b;
+    return r;
+  }
+  
+  int main() {
+    std::cout <<postDec(1) << "\n";
+    std::cout <<preDec(1)  << "\n";
+    std::cout <<incDec(1,2) << "\n";
+    std::cout <<remainTwo(4,2);
+    
+}

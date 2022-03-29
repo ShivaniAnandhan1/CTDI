@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+  int n,d;
+  std::cout << "Enter the value of n: ";
+  std::cin >> n;
+  int l=1;
+  for(int i=5;i>=l;i--){
+    d=n%10;
+    if(n==l){
+      std::cout << d;
+    }
+    n=n/10;
+  }
+}

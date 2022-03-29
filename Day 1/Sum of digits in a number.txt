@@ -1,0 +1,15 @@
+#include <iostream>
+int main() {
+  int n,temp,d,sum;
+  std::cout << "Enter the value of n: ";
+  std::cin >> n;
+  temp=n;
+  sum=0;
+  while(temp>0)
+    {
+      d=temp%10;
+      sum=sum+d;
+      temp=temp/10;
+    }
+  std::cout << sum;
+}
