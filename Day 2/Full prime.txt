@@ -1,0 +1,29 @@
+class Solution{
+    public:
+    bool primeCheck(int n){
+        int count=0;
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                count++;
+            }
+        }
+        if(count==2)
+        return true;
+        else
+        return false;
+    }
+	int fullPrime(int N){
+	    int d=0;
+	    if(primeCheck(N)==false){
+	        return 0;
+	    }
+	    while(N>0){
+	        d=N%10;
+	        if(primeCheck(d)==false){
+	            return 0;
+	        }
+	        N=N/10;
+	    }
+	    return 1;
+       }
+};
