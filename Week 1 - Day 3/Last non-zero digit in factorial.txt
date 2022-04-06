@@ -1,0 +1,24 @@
+#include <iostream>
+int fact(int N){
+    int fact=1;
+    for(int i=N;i>=1;i--){
+        fact=fact*i;
+    }
+    return fact;
+}
+int main() {
+  int d,n,rem;
+  std::cout <<"Enter the value of n: ";
+  std::cin >> n;
+  d=fact(n);
+      while(d>0){
+      rem=d%10;
+      if(rem!=0){
+        d=0;
+        std::cout << rem;
+      }
+      else{
+        d=d/10;
+      }
+      }
+  } 
