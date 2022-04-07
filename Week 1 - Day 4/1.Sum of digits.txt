@@ -1,0 +1,43 @@
+#include <iostream>
+int sumOfDigits(int N){
+  int d,sum=0;
+  while(N>0){
+    d=N%10;
+    sum=sum+d;
+    N=N/10;
+  }
+  return sum;
+}
+int prime(int sol){
+  if(sol==1){
+    return 0;
+  }
+  for(int i=2;i<=sol/2;i++){
+    if(sol%i==0){
+      return 0;
+    }
+  }
+  return 1;
+  
+}
+
+int main() {
+  int n,sol,rem,out,final;
+  std::cout << "Enter the value of n: ";
+  std::cin  >> n;
+  sol=sumOfDigits(n);
+  if(sol<=9){
+    out=prime(sol);
+    std::cout << out;
+    
+  }
+  while(sol>=10){
+    final=sumOfDigits(sol);
+    if(final<=9){
+      out=prime(final); 
+      sol=0;
+      std::cout << out;
+      
+    }
+  }
+}
