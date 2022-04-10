@@ -1,0 +1,53 @@
+2.Minimum and maximum in an array
+#include <iostream>
+int max(int a[]){
+  int max=0;
+  for(int i=0;i<5;i++){
+    int j;
+    j=i+1;
+    if(a[i]>a[j]){
+      if(a[i]>max){
+        max=a[i];
+      }
+    }
+    if(a[j]>a[i]){
+      if(a[j]>max){
+        max=a[j];
+      }
+    }
+  }
+  return max;
+}
+int min(int a[]){
+  int min=a[0];
+  for(int i=0;i<5;i++){
+    int j;
+    j=i+1;
+    if(a[i]<a[j]){
+      if(a[i]<min){
+        min=a[i];
+      }
+    }
+    if(a[j]<a[i]){
+      if(a[j]<min){
+        min=a[j];
+      }
+    }
+  }
+  return min;
+}
+int main() {
+  int a[6];
+  std::cout << "Enter the values of array: ";
+  for(int i=0;i<6;i++){
+    std::cin >> a[i];
+  }
+  int maximum;
+  maximum=max(a);
+  std::cout <<maximum;
+  std::cout <<"\n";
+  int minimum;
+  minimum=min(a);
+  std::cout <<minimum;
+  
+}

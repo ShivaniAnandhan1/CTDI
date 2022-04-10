@@ -1,0 +1,11 @@
+#include <iostream>
+int main() {
+  int a[]={1,2,3};
+  int n=3;
+  for(int i=1;i<=n;i++){
+  int b[i];
+  b[i]=a[n-i];
+  std::cout << b[i];
+  std::cout << " ";
+    }
+}
